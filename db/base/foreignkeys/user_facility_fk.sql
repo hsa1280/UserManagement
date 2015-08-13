@@ -1,0 +1,1 @@
+alter table users add constraint user_facility_fk foreign key (facility_id) references facility(id) on delete cascade;

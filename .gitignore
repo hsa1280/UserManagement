@@ -1,0 +1,7 @@
+.classpath
+.settings/
+.project
+.gradle/
+test-output/
+WebContent/WEB-INF/classes/
+/build

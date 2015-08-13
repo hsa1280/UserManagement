@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+	<!-- Appenders -->
+
+    <appender name="LOGFILE" class="org.apache.log4j.RollingFileAppender">
+    	<param name="File" value="${catalina.base}/logs/designtool/designtool.log"/>
+    	<param name="MaxFileSize" value="1MB"/>
+    	<param name="MaxBackupIndex" value="5"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %p [%C.%M:%L] - %m%n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="INFO"/>
+            <param name="LevelMax" value="FATAL"/>
+        </filter>
+    </appender>
+
+    <!-- Loggers -->
+
+	<!-- Defines appenders and default level for all sub-packages -->
+
+    <logger name="com.fruit">
+    	<level value="WARN"/>
+    	<appender-ref ref="LOGFILE"/>
+    </logger>
+
+	<logger name="org.springframework">
+		<level value="WARN"/>
+    	<appender-ref ref="LOGFILE"/>
+	</logger>
+
+	<logger name="org.apache">
+		<level value="WARN"/>
+    	<appender-ref ref="LOGFILE"/>
+	</logger>
+
+	<logger name="com.thoughtworks">
+		<level value="WARN"/>
+    	<appender-ref ref="LOGFILE"/>
+	</logger>
+
+	<logger name="org.displaytag">
+		<level value="WARN"/>
+    	<appender-ref ref="LOGFILE"/>
+	</logger>
+	
+	<logger name="com.jcraft">
+		<level value="WARN"/>
+    	<appender-ref ref="LOGFILE"/>
+	</logger>
+
+	<!-- Enable all severity levels by default, but no appenders -->
+    <root>
+        <level value="WARN"/>
+    </root>
+
+</log4j:configuration>
