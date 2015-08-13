@@ -5,3 +5,4 @@
 test-output/
 WebContent/WEB-INF/classes/
 /build
+/bin

@@ -72,7 +72,7 @@ public class ServiceConfig {
 		
 		HibernateJpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter();
 		
-		jpaVendorAdapter.setDatabase( Database.ORACLE );
+		jpaVendorAdapter.setDatabase( Database.MYSQL );
 		jpaVendorAdapter.setGenerateDdl( false );
 		
 		entityManagerFactoryBean.setJpaVendorAdapter( jpaVendorAdapter );
