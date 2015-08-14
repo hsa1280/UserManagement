@@ -5,6 +5,8 @@
 		 id="WebApp_ID"
 		 version="3.0">
 
+
+	<!-- http://localhost:8080/UserManagement/page/facility/home -->
   	<display-name>UserManagement</display-name>
 
 	<context-param>

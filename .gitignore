@@ -6,3 +6,5 @@ test-output/
 WebContent/WEB-INF/classes/
 /build
 /bin
+.idea/
+UserManagement.iml
