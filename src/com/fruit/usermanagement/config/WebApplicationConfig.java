@@ -12,16 +12,28 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @ComponentScan( "com.fruit.usermanagement.frontend.controller" )
 public class WebApplicationConfig extends WebMvcConfigurerAdapter {
 
+//	@Bean
+//	public InternalResourceViewResolver internalViewResourceResolver() {
+//
+//		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+//
+//		resolver.setPrefix( "/WEB-INF/jsp/" );
+//		resolver.setSuffix( ".jsp" );
+//
+//		return resolver;
+//
+//	}
+
 	@Bean
 	public InternalResourceViewResolver internalViewResourceResolver() {
-		
+
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-		
-		resolver.setPrefix( "/WEB-INF/jsp/" );
-		resolver.setSuffix( ".jsp" );
-		
+
+		resolver.setPrefix( "/WEB-INF/html/" );
+		resolver.setSuffix( ".html" );
+
 		return resolver;
-		
+
 	}
 
 }

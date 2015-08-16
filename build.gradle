@@ -71,7 +71,6 @@ task wrapper( type: Wrapper ) {
  */
 
 group = 'com.fruit'
-version = '1.0.0'
 
 /*
  * Java Plugin Configuration
