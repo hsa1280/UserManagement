@@ -35,7 +35,7 @@ public class WebApplicationConfig extends WebMvcConfigurerAdapter {
 
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
 
-		resolver.setPrefix( "/WEB-INF/html/" );
+		resolver.setPrefix( "/html/" );
 		resolver.setSuffix( ".html" );
 
 		return resolver;

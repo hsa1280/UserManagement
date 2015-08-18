@@ -12,15 +12,26 @@ var App = angular.module('AngularUserManagementApp', []);
 App.controller('GreetingController', ['$scope', '$http', function($scope, $http) {
 	$scope.greeting = 'hello';
 	$scope.test1 = 'test1';
-	$http.get('/index').
-		then(function(response) {
+//	$http.get('/data').
+//		then(function(response) {
+//			$scope.test2 = 'success';
+//			$scope.data = response.data;
+//		},
+//		function(response) {
+//			$scope.test3 = 'error';
+//			$scope.error = response.data;
+//		});
+	$scope.getFacilityList = function() {
+		$http.get('/data').success(function(response) {
 			$scope.test2 = 'success';
-			$scope.data = response.data;
-		},
-		function(response) {
+			$scope.data = response;
+		})
+		.error(function(response) {
+			$scope.error = response;
 			$scope.test3 = 'error';
-			$scope.error = response.data;
 		});
+	}
+
 }]);
 
 
