@@ -23,7 +23,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableJpaRepositories( "com.fruit.usermanagement.backend.repository.jpa" )
 @EnableTransactionManagement
 @ComponentScan( basePackages = {
-	"com.fruit.usermanagement.backend.service",
+	"com.fruit.usermanagement.backend.service"
 })
 @Import( value = {
 	DatasourceConfig.class,

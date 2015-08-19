@@ -22,7 +22,7 @@ App.controller('GreetingController', ['$scope', '$http', function($scope, $http)
 //			$scope.error = response.data;
 //		});
 	$scope.getFacilityList = function() {
-		$http.get('/data').success(function(response) {
+		$http.get('/UserManagement/page/data').success(function(response) {
 			$scope.test2 = 'success';
 			$scope.data = response;
 		})
